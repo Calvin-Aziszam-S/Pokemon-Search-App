@@ -18,12 +18,12 @@ const apiUrl = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
 
 async function getData() {
 	try {
-		const response = await fetch(`${apiUrl}${searchInput.value}`);
+		const response = await fetch(`${apiUrl}${searchInput.value.toLowerCase()}`);
 		const data = await response.json();
 		console.log(data);
 
 		pokemonName.innerText = `${data["name"].toUpperCase()}`;
-		pokemonId.innerText = `#${data["id"]}`;
+		pokemonId.innerText = `${data["id"]}`;
 		pokemonWeight.innerText = `Weight: ${data["weight"]}`;
 		pokemonHeight.innerText = `Height: ${data["height"]}`;
 		pokemonSpriteContainer.innerHTML = `<img id="sprite" src="${data["sprites"]["front_default"]}" alt="${data["name"]} image"/>`;

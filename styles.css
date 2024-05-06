@@ -8,8 +8,8 @@
 }
 
 body {
-	background-color: #151931;
-	color: #e8e1eb;
+	background-color: #1d1f21;
+	color: #fff;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,7 +23,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #252841;
+	background-color: #2c2e30;
 	margin-top: 40px;
 	padding: 25px;
 	border-radius: 20px;
@@ -32,26 +32,117 @@ body {
 #search-container {
 	display: flex;
 	flex-direction: column;
+	width: 300px;
+}
+
+#search-input {
+	font-size: 20px;
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 3.5px solid #2c2e30;
+	border-radius: 10px;
+	outline: none;
+	color: #2c2e30;
+}
+
+#search-input::placeholder {
+	font-size: 17px;
+}
+
+#search-input:focus {
+	border: 3.5px solid #ff983f;
+}
+
+#search-button {
+	background-color: #ff6600;
+	border: 2px solid #ff6600;
+	text-align: center;
+	border-radius: 20px;
+	color: #fff;
+	font-size: 20px;
+	padding: 7px;
+	cursor: pointer;
+	transition-duration: 0.3s;
+	margin-bottom: 25px;
+}
+
+#search-button:hover {
+	border: 2px solid #ff8737;
+	background-color: #ff8737;
+}
+
+#search-button:active {
+	border: 2px solid #3c4e6d;
+	background-color: #3c4e6d;
+	transform: scale(0.9);
+	transition-duration: 0.15s;
 }
 
 #result-container {
 	display: none;
+	width: 300px;
+	justify-content: space-between;
 	flex-direction: column;
+}
+
+#result-top {
+	background-color: #e0e0e0;
+	padding: 10px;
+	border-radius: 10px;
+	color: #2c2e30;
 }
 
 #result-name-id {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#pokemon-name {
+	font-size: 25px;
+	font-weight: 800;
+}
+
+#pokemon-id {
+	font-size: 15px;
+	background-color: #ff6600;
+	width: 56px;
+	border-radius: 10px;
+	padding: 10px;
+	padding-bottom: 11px;
+	color: #fff;
+	text-align: center;
 }
 
 #result-weight-height {
 	display: flex;
-	gap: 7px;
+	gap: 10px;
+}
+
+#weight,
+#height {
+	background-color: #929292;
+	border-radius: 10px;
+	padding: 7px;
+	color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#sprite-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#sprite {
+	width: 200px;
 }
 
 #types {
 	display: flex;
-	gap: 7px;
+	gap: 10px;
 }
 
 #result-stats {
