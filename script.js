@@ -31,9 +31,9 @@ async function getData() {
 		pokemonTypes.innerHTML = `${data["types"]
 			.map(
 				(e) =>
-					`<span>${e["type"]["name"].charAt(0).toUpperCase()}${e["type"][
-						"name"
-					].slice(1)}</span>`
+					`<span class="type ${e["type"]["name"]}">${e["type"]["name"]
+						.charAt(0)
+						.toUpperCase()}${e["type"]["name"].slice(1)}</span>`
 			)
 			.join("")}`;
 
